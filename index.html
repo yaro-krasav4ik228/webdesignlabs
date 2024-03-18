@@ -100,6 +100,41 @@
         </div>        
     </footer>
     </div>
+    <div class="add-modal">
+        <div class="add-modal__content">
+            <div class="add-modal__header">
+                <h4 class="add-modal__title">Add contact</h4>
+                <div class="add-modal__close">x</div>
+            </div>
+            <div class="add-modal__body">
+                <form action="#" class="add-modal__form">
+                    <input required placeholder="Name" name="name" type="text" class="add-modal__name">
+                    <input required placeholder="Surname" name="surname" type="text" class="add-modal__surname">
+                    <input required placeholder="Number" name="phone" type="phone" class="add-modal__phone">
+                    <button type ="submit" class="btn btn-success add-modal__button">Submit</button>
+                </form>
+                <p id="addErrorMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit-modal">
+        <div class="edit-modal__content">
+            <div class="edit-modal__header">
+                <h4 class="edit-modal__title">Edit contact</h4>
+                <div class="edit-modal__close">x</div>
+            </div>
+            <div class="edit-modal__body">
+                <form action="#" class="edit-modal__form">
+                    <input required placeholder="Name" name="name" type="text" class="edit-modal__name">
+                    <input required placeholder="Surame" name="surname" type="text" class="edit-modal__surname">
+                    <input required placeholder="Number" name="phone" type="phone" class="edit-modal__phone">
+                    <button type ="submit" class="btn btn-success edit-modal__button">Submit</button>
+                </form>
+                <p id="editErrorMessage"></p>
+            </div>
+        </div>
+    </div>
     <script type="module" src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

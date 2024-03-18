@@ -2,7 +2,8 @@ class Contact {
     constructor(number) {
         this.number = +document.querySelectorAll(".table-main__data_1")[number].innerHTML;
         this.name = document.querySelectorAll(".table-main__data_2")[number].innerHTML;
-        this.phone = document.querySelectorAll(".table-main__data_3")[number].innerHTML;
+        this.surname = document.querySelectorAll(".table-main__data_3")[number].innerHTML;
+        this.phone = document.querySelectorAll(".table-main__data_4")[number].innerHTML;
     }
 };
 
@@ -19,6 +20,7 @@ export const controller = {
     addModal: undefined,
     exitAddModal: undefined,
     nameAddModal: undefined,
+    surnameAddModal: undefined,
     phoneAddModal: undefined,
     buttonAddModal: undefined,
     errorMessage: undefined,
@@ -31,6 +33,7 @@ export const controller = {
     editModal: undefined,
     exitEditModal: undefined,
     nameEditModal: undefined,
+    surnameEditModal: undefined,
     phoneEditModal: undefined,
     buttonEditModal: undefined,
     editErrorMessage: undefined,
@@ -57,6 +60,7 @@ export const controller = {
         this.addModal = document.querySelector(".add-modal");
         this.exitAddModal = document.querySelector(".add-modal__close");
         this.nameAddModal = document.querySelector(".add-modal__name");
+        this.surnameAddModal = document.querySelector(".add-modal__surname");
         this.phoneAddModal = document.querySelector(".add-modal__phone");
         this.buttonAddModal = document.querySelector(".add-modal__button");
         this.errorMessage = document.querySelector("#addErrorMessage");
@@ -69,6 +73,7 @@ export const controller = {
         this.editModal = document.querySelector(".edit-modal");
         this.exitEditModal = document.querySelector(".edit-modal__close");
         this.nameEditModal = document.querySelector(".edit-modal__name");
+        this.surnameEditModal = document.querySelector(".edit-modal__surname");
         this.phoneEditModal = document.querySelector(".edit-modal__phone");
         this.buttonEditModal = document.querySelector(".edit-modal__button");
         this.editErrorMessage = document.querySelector("#editErrorMessage");

@@ -6,7 +6,8 @@ export const view = {
         <div class="table-main__row">
             <div class="table-main__data table-main__data_1">${controller.currentContacts + 1}</div>
             <div class="table-main__data table-main__data_2">${name}</div>
-            <div class="table-main__data table-main__data_3">${phone}</div>
+            <div class="table-main__data table-main__data_3">${surname}</div>
+            <div class="table-main__data table-main__data_4">${phone}</div>
         </div>
         `;
         controller.contactsTable.innerHTML += newContact;
@@ -23,6 +24,7 @@ export const view = {
     
     clearAddModal() {
         controller.nameAddModal.value = "";
+        controller.surnameAddModal.value = "";
         controller.phoneAddModal.value = "";
         controller.errorMessage.innerHTML = "";
     },
@@ -68,6 +70,7 @@ export const view = {
 
     clearEditModal() {
         controller.nameEditModal.value = "";
+        controller.surnameEditModal.value = "";
         controller.phoneEditModal.value = "";
         controller.editErrorMessage.innerHTML = "";
     },
@@ -77,8 +80,11 @@ export const view = {
         if (name != "") {
             document.querySelectorAll(".table-main__data_2")[selectedContact - 1].innerHTML = name;
         }
+        if (surname != "") {
+            document.querySelectorAll(".table-main__data_3")[selectedContact - 1].innerHTML = name;
+        }
         if (phone != "") {
-            document.querySelectorAll(".table-main__data_3")[selectedContact - 1].innerHTML = phone;
+            document.querySelectorAll(".table-main__data_4")[selectedContact - 1].innerHTML = phone;
         }
     
         controller.getContacts();
@@ -97,7 +103,8 @@ export const view = {
             <div class="table-main__row">
                 <div class="table-main__data table-main__data_1">${i + 1}</div>
                 <div class="table-main__data table-main__data_2">${controller.contactsArray[i].name}</div>
-                <div class="table-main__data table-main__data_3">${controller.contactsArray[i].phone}</div>
+                <div class="table-main__data table-main__data_3">${controller.contactsArray[i].surname}</div>
+                <div class="table-main__data table-main__data_4">${controller.contactsArray[i].phone}</div>
             </div>
             `;
             controller.contactsTable.innerHTML += newContact;

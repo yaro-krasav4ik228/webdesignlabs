@@ -17,17 +17,22 @@ window.addEventListener("DOMContentLoaded", () => {
     controller.buttonAddModal.addEventListener("click", (e) => {
         e.preventDefault();
         const name = controller.nameAddModal.value;
+        const surname = controller.surnameAddModal.value;
         const phone = controller.phoneAddModal.value;
         if(!model.validatePhone(phone) && name.length == 0) {
-            controller.errorMessage.innerHTML = "Некоректний формат імені та номеру";
+            controller.errorMessage.innerHTML = "Wrong data";
         }
         else if(!model.validatePhone(phone)) {
-            controller.errorMessage.innerHTML = "Некоректний формат номеру";
-        } else if (name.length == 0) {
-            controller.errorMessage.innerHTML = "Некоректний формат імені";
+            controller.errorMessage.innerHTML = "Wrong number";
+        } 
+        else if (name.length == 0) {
+            controller.errorMessage.innerHTML = "Wrong name";
+        }
+        else if (surname.length == 0) {
+            controller.errorMessage.innerHTML = "Wrong surname";
         }
         else {
-            view.addContact(name, phone);
+            view.addContact(name, surname, phone);
             view.clearAddModal();
             view.closeAddModal();
             controller.getContacts();
@@ -62,12 +67,13 @@ window.addEventListener("DOMContentLoaded", () => {
     controller.buttonEditModal.addEventListener("click", (e) => {
         e.preventDefault();
         const name = controller.nameEditModal.value;
+        const surname = controller.surnameEditModal.value;
         const phone = controller.phoneEditModal.value;
         if(!model.validatePhone(phone) && phone != "") {
-            controller.editErrorMessage.innerHTML = "Некоректний формат номеру";
+            controller.editErrorMessage.innerHTML = "Wrong phone number type";
         }
         else {
-            view.editContact(name, phone);
+            view.editContact(name, surname, phone);
             view.clearEditModal();
             view.closeEditModal();
             controller.getContacts();
