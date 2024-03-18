@@ -26,72 +26,72 @@
             </div>
         </div>
     </nav>
-    <table class="table table-hover table-secondary">
-        <thead>
-            <tr>
-                <th>№</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone number</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Vasya</td>
-                <td>Pupkin</td>
-                <td>+380502282828</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Petryk</td>
-                <td>Pyatochkin</td>
-                <td>+380991341413</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>George</td>
-                <td>Bush</td>
-                <td>+380736783400</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Valera Shinomontaj</td>
-                <td></td>
-                <td>+380738990871</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Polina recepshyn</td>
-                <td></td>
-                <td>+380736783400</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Mihalych</td>
-                <td></td>
-                <td>+380989087609</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td></td>
-                <td>Bondarenko</td>
-                <td>+380989044416</td>
-            </tr>
-        </tbody>
-    </table>
-    <div style="display: flex; justify-content: center;">
-        <button type="button" class="btn btn-outline-secondary" style="margin-right: 25px;">
-            <i class="bi-plus"></i> Add contact
-        </button>
-        <button type="button" class="btn btn-outline-secondary" style="margin-right: 25px;">
-            <i class="bi-pencil"></i> Edit contact
-        </button>
-        <button type="button" class="btn btn-outline-secondary" style="margin-right: 25px;">
-            <i class="bi-trash"></i> Delete contact
-        </button>
-        <button type="button" class="btn btn-outline-secondary"><i class="bi-arrow-bar-down"></i> Sort by name</button>
-    </div>    
+    <main class="page">
+        <section class="page__main main">
+            <div class="main__container container">
+                <div class="main__body">
+                    <div class="main__table table-main">
+                        <div class="table-main__row">
+                            <div class="table-main__head table-main__head_1">№</div>
+                            <div class="table-main__head table-main__head_2">First Name</div>
+                            <div class="table-main__head table-main__head_3">Last Name</div>
+                            <div class="table-main__head table-main__head_4">Phone number</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">1</div>
+                            <div class="table-main__data table-main__data_2">Vasya</div>
+                            <div class="table-main__data table-main__data_3">Pupkin</div>
+                            <div class="table-main__data table-main__data_4">+380502282828</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">2</div>
+                            <div class="table-main__data table-main__data_2">Petryk</div>
+                            <div class="table-main__data table-main__data_3">Pyatochkin</div>
+                            <div class="table-main__data table-main__data_4">+380991341413</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">3</div>
+                            <div class="table-main__data table-main__data_2">George</div>
+                            <div class="table-main__data table-main__data_3">Bush</div>
+                            <div class="table-main__data table-main__data_4">+380736783400</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">4</div>
+                            <div class="table-main__data table-main__data_2">Valera Shinomontaj</div>
+                            <div class="table-main__data table-main__data_3"></div>
+                            <div class="table-main__data table-main__data_4">+380738990871</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">5</div>
+                            <div class="table-main__data table-main__data_2">Polina recepshyn</div>
+                            <div class="table-main__data table-main__data_3"></div>
+                            <div class="table-main__data table-main__data_4">+380736748520</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">6</div>
+                            <div class="table-main__data table-main__data_2">Mihalych</div>
+                            <div class="table-main__data table-main__data_3"></div>
+                            <div class="table-main__data table-main__data_4">+380989087609</div>
+                        </div>
+                        <div class="table-main__row">
+                            <div class="table-main__data table-main__data_1">7</div>
+                            <div class="table-main__data table-main__data_2"></div>
+                            <div class="table-main__data table-main__data_3">Bondarenko</div>
+                            <div class="table-main__data table-main__data_4">+380989044416</div>
+                        </div>
+                    </div>
+                    <div class="main__manage manage-main">
+                        <div class="manage-main__buttons" style="display: flex; justify-content: center;">
+                            <button type="button" class="manage-main__button button-add btn btn-outline-secondary" style="margin-right: 25px;">Add contact</button>
+                            <button type="button" class="manage-main__button button-delete btn btn-outline-secondary" style="margin-right: 25px;"">Delete contact</button>
+                            <button type="button" class="manage-main__button button-edit btn btn-outline-secondary" style="margin-right: 25px;">Edit contact</button>
+                            <button type="button" class="manage-main__button button-sort btn btn-outline-secondary" style="margin-right: 25px;">Sort by name</button>
+                        </div>
+                    </div>
+                </div>      
+            </div>             
+        </section>
+    </main>  
     <hr>
     <footer class="footer">
         <div class="footer__copy">
@@ -100,6 +100,7 @@
         </div>        
     </footer>
     </div>
+    <script type="module" src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

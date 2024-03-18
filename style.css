@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus, :active {outline: none;}
+a:focus, a:active {outline: none;}
+
+nav, footer, header, aside {display: block;}
+
+input, button, textarea {font-family: inherit;}
+
+input::-ms-clear {display: none;}
+button {cursor: pointer; background-color: inherit;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.container {
+    max-width: 1310px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-main {
+    margin-bottom: 30px;
+    height: 480px;
+    overflow: auto;
+}
+
+.table-main__row {
+    display: flex;
+    border-bottom: 1px solid rgb(93, 93, 93);
+}
+
+.table-main__head {
+    font-weight: bold;
+}
+
+.table-main__head_1, .table-main__data_1 {
+    flex: 0 0 10%;
+}
+
+.table-main__head_2, .table-main__data_2, .table-main__head_3, .table-main__data_3 {
+    flex: 0 0 20%;
+}
+
+.table-main__head_3, .table-main__data_3, .table-main__head_4, .table-main__data_4 {
+    flex: 0 0 30%;
+}
+
+.main__manage {
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 265px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-disabled {
+    background-color: grey;
+}
+
+.about__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about__list li {
+    list-style-type: disc;
+}
+
+.about__list li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.profile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.profile__alert {
+    margin-bottom: 40px;
+}
+
+.profile__table tr {
+    height: 40px;
+}
+
+.signin {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+.signup {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+.add-modal, .edit-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-modal__content, .edit-modal__content {
+    position: fixed;
+    left: calc(50% - 286px);
+    top: 100px;
+    background-color: white;
+    border: 1px solid rgb(189, 184, 184);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.add-modal_active, .edit-modal_active {
+    display: block;
+}
+
+.add-modal__header, .edit-modal__header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.add-modal__close:hover, .edit-modal__close:hover {
+    cursor: pointer;
+}
+
+.add-modal__title, .edit-modal__title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.add-modal__form, .edit-modal__form{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.add-modal__name, .edit-modal__name {
+    border-bottom: 1px solid rgb(189, 184, 184);
+}
+
+.add-modal__phone, .edit-modal__phone {
+    width: 200px;
+    border-bottom: 1px solid rgb(189, 184, 184);
+}
+
+@media(max-width: 767.98px) {
+    .add-modal__form, .edit-modal__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .add-modal__content, .edit-modal__content {
+        top: 50px;
+        left: calc(50% - 181px);
+    }
+    .add-modal__phone, .add-modal__name, .edit-modal__phone, .edit-modal__name {
+        width: 300px;
+    }
+    .add-modal__button, .edit-modal__button {
+        margin-bottom: 10px;
+    }
+    #addErrorMessage, #editErrorMessage {
+        text-align: center;
+    }
+}
+
+@media(max-width: 424.98px) {
+    .add-modal__content, .edit-modal__content {
+        top: 50px;
+        left: calc(50% - 121px);
+        padding: 20px;
+    }
+    .add-modal__phone, .add-modal__name, .edit-modal__phone, .edit-modal__name {
+        width: 200px;
+    }
+}
