@@ -147,7 +147,7 @@ img {vertical-align: top;}
     left: calc(50% - 286px);
     top: 100px;
     background-color: white;
-    border: 1px solid rgb(189, 184, 184);
+    border: 1px solid rgb(145, 145, 145);
     border-radius: 10px;
     padding: 30px;
 }
@@ -182,6 +182,10 @@ img {vertical-align: top;}
     border-bottom: 1px solid rgb(189, 184, 184);
 }
 
+.add-modal__surname, .edit-modal__surname {
+    border-bottom: 1px solid rgb(189, 184, 184);
+}
+
 .add-modal__phone, .edit-modal__phone {
     width: 200px;
     border-bottom: 1px solid rgb(189, 184, 184);
@@ -197,7 +201,7 @@ img {vertical-align: top;}
         top: 50px;
         left: calc(50% - 181px);
     }
-    .add-modal__phone, .add-modal__name, .edit-modal__phone, .edit-modal__name {
+    .add-modal__phone, .add-modal__surname, .add-modal__name, .edit-modal__phone, .edit-modal__name, .edit-modal__surname {
         width: 300px;
     }
     .add-modal__button, .edit-modal__button {
@@ -208,13 +212,13 @@ img {vertical-align: top;}
     }
 }
 
-@media(max-width: 424.98px) {
+@media(max-width: 425px) {
     .add-modal__content, .edit-modal__content {
         top: 50px;
         left: calc(50% - 121px);
         padding: 20px;
     }
-    .add-modal__phone, .add-modal__name, .edit-modal__phone, .edit-modal__name {
+    .add-modal__phone, .add-modal__surname, .add-modal__name, .edit-modal__phone, .edit-modal__name, .edit-modal__surname {
         width: 200px;
     }
 }

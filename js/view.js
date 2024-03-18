@@ -1,7 +1,7 @@
 import { controller } from "./controller.js";
 
 export const view = {
-    addContact(name, phone) {
+    addContact(name, surname, phone) {
         const newContact = `
         <div class="table-main__row">
             <div class="table-main__data table-main__data_1">${controller.currentContacts + 1}</div>
@@ -75,18 +75,17 @@ export const view = {
         controller.editErrorMessage.innerHTML = "";
     },
 
-    editContact(name, phone) {
+    editContact(name, surname, phone) {
         let selectedContact = Array.from(controller.selectedContacts)[0];
         if (name != "") {
             document.querySelectorAll(".table-main__data_2")[selectedContact - 1].innerHTML = name;
         }
         if (surname != "") {
-            document.querySelectorAll(".table-main__data_3")[selectedContact - 1].innerHTML = name;
+            document.querySelectorAll(".table-main__data_3")[selectedContact - 1].innerHTML = surname;
         }
         if (phone != "") {
             document.querySelectorAll(".table-main__data_4")[selectedContact - 1].innerHTML = phone;
         }
-    
         controller.getContacts();
     },
 
